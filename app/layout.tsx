@@ -1,27 +1,23 @@
 import type { Metadata } from "next";
-import {
-  Inter,
-  Space_Grotesk,
-} from "next/font/google";
+import { Space_Grotesk as SpaceGrotesk } from "next/font/google";
 import React from "react";
 
 import "./globals.css";
 
-const interSans = Inter({
-  variable: "--font-Inter-sans",
+const spaceGrotesk = SpaceGrotesk({
   subsets: ["latin"],
-});
-const spaceGroteskLogo = Space_Grotesk({
-  variable: "--font-logo",
-  subsets: ["latin"],
+  variable: "--space-grotesk",
+  display: "swap",
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Dev Overflow",
+  title:
+    'Serhii "Grifano" Orlenko - Frontend Developer',
   description:
     "A community-driven platform for asking and answering programming questions. Get help, share knowledge, and collaborate with developers from around the world. Explore topics in web development, mobile app development, algorithms, data structures, and more.",
   icons: {
-    icon: "/images/site-logo.svg",
+    icon: "/images/site-favicon.svg",
   },
 };
 
@@ -33,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${interSans.className} ${spaceGroteskLogo.variable} antialiased`}
+        className={`${spaceGrotesk.variable} antialiased`}
       >
         {children}
       </body>
