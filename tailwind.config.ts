@@ -17,7 +17,7 @@ const config: Config = {
           black: "#170e01",
           darkBlue: "#2f4858",
           yellow: "#f8be61",
-          white: "#grey",
+          grey: "#dfe0df",
           error: "#ff75bc",
           success: "#00c497",
         },
